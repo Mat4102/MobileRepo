@@ -1,0 +1,22 @@
+<view left-buttons="leftButtons" right-buttons="rightButtons">
+    <content has-header="true">
+        <div class="list list-inset">
+            Insert Customer Code: <input ng-model="code" ng-keyup="GETCustomer(code)"/>
+            <div class="list" ng-repeat="cust in (filteredCust = (customers | filter: code))">
+
+                <a class="item item-icon-left assertive"  ng-click="insert(cust.id)">
+                    <i class="icon ion-android-contact"></i>
+                    <h2>Code : {{cust.id}}</h2>
+                    <p>first Name : {{cust.value[1]}}</p>
+                </a>
+            </div>
+
+            <div class="item item-divider assertive">
+                <a class="button button-assertive button-block" ng-href="#/main">cancel</a>
+
+            </div>
+        </div>
+
+
+    </content>
+</view>

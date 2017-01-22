@@ -1,0 +1,31 @@
+<view left-buttons="leftButtons" right-buttons="rightButtons" hide-back-button="true" title="'Login'">
+    <content padding="true" has-header="true"  >
+        <div class="padding">
+            <h2>Hello!</h2>
+        </div>
+        <form ng-controller="LoginCtrl" name="myForm"  novalidate>
+
+            <label class="item item-input">
+                <span class="input-label"> User name</span>
+                <input type="text" name="userName" ng-model="login" required>
+
+            </label>
+        <span style="color: red;"class="error" ng-show="myForm.userName.$error.required">
+                User name Required!</span>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" name="pwd" ng-model="password"
+                       ng-minlength="5" ng-maxlength="10" required>
+            </label>
+    <span style="color: red;"class="error" ng-show="myForm.pwd.$error.required">
+         Password Required!</span><br>
+        <span style="color: red;"class="error" ng-show="myForm.pwd.$error.minlength">
+          Too short!</span><br>
+        <span style="color: red;"class="error" ng-show="myForm.pwd.$error.maxlength">
+          Too long!</span><br>
+            <p>{{ login }}</p>
+            <button ng-disabled="!myForm.$valid" ng-click="submit(myForm)" class="button button-assertive button-block">submit</button>
+
+        </form>
+    </content>
+</view>

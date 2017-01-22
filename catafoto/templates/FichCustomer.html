@@ -1,0 +1,42 @@
+<div class="modal" id="add-family-modal">
+
+    <header class="bar bar-header bar-assertive">
+        <h1 class="title">Search customer</h1>
+        <div class="button button-clear " ng-click="closeModal()"><span class="icon ion-close"></span>
+        </div>
+    </header>
+
+    <content has-header="true">
+        <div class="card">
+            <div class="item item-divider assertive">
+                Getting Customer details
+            </div>
+            <div class="item item-text-wrap">
+                <div class="list">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Customer Code </span>
+                        <input type="text" placeholder="123">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">First Name</span>
+                        <input type="text" placeholder="John">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Last Name</span>
+                        <input type="text" placeholder="Suhr">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Address</span>
+                        <input type="text" placeholder="john@suhr.com">
+                    </label>
+                </div>
+            </div>
+            <div class="item item-divider assertive">
+                <a class="button button-icon icon  ion-android-arrow-back button-assertive" ng-click="closeModal()"></a>
+                <a class="button button-icon icon ion-android-add-contact button-assertive"></a>
+            </div>
+        </div>
+
+
+    </content>
+</div>

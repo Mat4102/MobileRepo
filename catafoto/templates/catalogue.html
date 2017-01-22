@@ -1,0 +1,221 @@
+<view left-buttons="leftButtons" right-buttons="rightButtons" hide-back-button="true" title="'Catalogue'">
+<content  has-header="true">
+        <div class="row">
+            <div class="col col-67">
+                <div class="card">
+                    <div class="item item-divider assertive">
+                        Product Gallery
+                    </div>
+                    <div class="item item-text-wrap">
+                <slide-box on-slide-changed="slideChanged(index)">
+                    <slide>
+                <div class="row">
+        <div class="col">
+            <div class="list card">
+
+            <div class="item item-avatar assertive">
+
+                <h2>Article</h2>
+                <p>1</p>
+            </div>
+
+            <div class="item item-image">
+                    <img src="http://www.geekzeitung.com/wp-content/uploads/2009/07/apple-150x150.jpg">
+
+            </div>
+
+            <a class="item item-icon-left assertive" href="#/article">
+                <i class="icon ion-ios7-cart-outline"></i>
+                Buy now
+            </a>
+
+        </di >
+            </div>
+            </div>
+
+        <div class="col">
+            <div class="list card">
+
+                <div class="item item-avatar assertive">
+
+                    <h2>Article</h2>
+                    <p>2</p>
+                </div>
+
+                <div class="item item-image">
+                       <a href="#/variaty" ><img src="http://www.geekzeitung.com/wp-content/uploads/2009/07/apple-150x150.jpg"></a>
+
+                </div>
+
+                <a class="item item-icon-left assertive" href="#/article">
+                    <i class="icon ion-ios7-cart-outline"></i>
+                    Buy now
+                </a>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="list card">
+
+                <div class="item item-avatar assertive">
+
+                    <h2>Article</h2>
+                    <p>3</p>
+                </div>
+
+                <div class="item item-image">
+                        <img src="http://www.geekzeitung.com/wp-content/uploads/2009/07/apple-150x150.jpg">
+
+                </div>
+
+                <a class="item item-icon-left assertive" href="#/article">
+                    <i class="icon ion-ios7-cart-outline"></i>
+                    Buy now
+                </a>
+
+            </div>
+        </div>
+                    </div>
+
+                    </slide>
+
+                    <slide>
+                        <div class="row">
+                            <div class="col">
+                                <div class="list card">
+
+                                    <div class="item item-avatar assertive">
+
+                                        <h2>Article</h2>
+                                        <p>4</p>
+                                    </div>
+
+                                    <div class="item item-image">
+                                            <img src="http://www.geekzeitung.com/wp-content/uploads/2009/07/apple-150x150.jpg">
+
+                                    </div>
+
+                                    <a class="item item-icon-left assertive" href="#/article">
+                                        <i class="icon ion-ios7-cart-outline"></i>
+                                        Buy now
+                                    </a>
+
+                                    </div>
+                                </div>
+
+                            <div class="col">
+                                <div class="list card">
+
+                                    <div class="item item-avatar assertive">
+
+                                        <h2>Article</h2>
+                                        <p>5</p>
+                                    </div>
+
+                                    <div class="item item-image">
+                                            <img src="http://www.geekzeitung.com/wp-content/uploads/2009/07/apple-150x150.jpg">
+
+                                    </div>
+
+                                    <a class="item item-icon-left assertive" href="#/article">
+                                        <i class="icon ion-ios7-cart-outline"></i>
+                                        Buy now
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="list card">
+
+                                    <div class="item item-avatar assertive">
+
+                                        <h2>Article</h2>
+                                        <p>6</p>
+                                    </div>
+
+                                    <div class="item item-image">
+                                        <a href="#/article"> <img src="http://www.geekzeitung.com/wp-content/uploads/2009/07/apple-150x150.jpg"> </a>
+                                    </div>
+
+                                    <a class="item item-icon-left assertive" href="#/article">
+                                        <i class="icon ion-ios7-cart-outline"></i>
+                                        Buy now
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </slide>
+                </slide-box>
+                    </div>
+                    <div class="item item-divider ">
+                        <div class="item tabs tabs-secondary tabs-icon-left assertive">
+                            <a class="tab-item" href="#/main">
+                                <i class="icon ion-home"></i>
+                            </a>
+                            <a class="tab-item" href="#/manual">
+                                <i class="icon ion-ios7-compose-outline"></i>
+                            </a>
+                            <a class="tab-item" href="#/main">
+                                <i class="icon ion-ios7-search-strong"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+        <div class="col col-33" ng-controller="MenuCtrl">
+
+            <div class="card">
+                <div class="item item-divider assertive">
+                    Advanced Search
+                </div>
+                <div class="item item-text-wrap">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Fournisseur</span>
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-ios7-search placeholder-icon"></i>
+                        <input type="search" placeholder="Search">
+                    </label>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Marque</span>
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-ios7-search placeholder-icon"></i>
+                        <input type="search" placeholder="Search">
+                    </label>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Ligne</span>
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-ios7-search placeholder-icon"></i>
+                        <input type="search" placeholder="Search">
+                    </label>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Secteur</span>
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-ios7-search placeholder-icon"></i>
+                        <input type="search" placeholder="Search">
+                    </label>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Famille</span>
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-ios7-search placeholder-icon"></i>
+                        <input type="search" placeholder="Search">
+                    </label>
+                </label>
+
+                </div>
+                    <div class="item item-divider assertive">
+                        I'm a Footer in a Card!
+                    </div>
+                </div>
+
+            </div>
+</div>
+
+</content>
+    </view>

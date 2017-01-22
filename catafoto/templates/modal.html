@@ -1,0 +1,37 @@
+<div class="modal" id="add-family-modal">
+
+    <header class="bar bar-header bar-assertive">
+        <h1 class="title">Search customer</h1>
+        <div class="button button-clear " ng-click="closeModal()"><span class="icon ion-close"></span>
+        </div>
+    </header>
+
+    <content has-header="true" ng-controller="ServiceCliente">
+        <div class="padding">
+            <h2>Customer!</h2>
+        </div>
+        <div class="list list-inset" >
+            Insert Customer Code: <input ng-model="code" />
+            <ul ng-repeat="cust in customers | filter: code">
+                <li>
+                    <label class="item item-input item-stacked-label">
+                        <h3> Customer Code : {{cust.id}}</h3>
+                    </label>
+                </li>
+                <li>
+                    <label class="item item-input item-stacked-label">
+                        <h3> Customer first Name : {{cust.value[1]}}</h3>
+                    </label>
+                </li>
+            </ul>
+
+            <div class="item item-divider assertive">
+                <button class="button button-assertive button-block" ng-click="GETCustomer(code)">get</button>
+                    <button class="button button-assertive button-block" ng-click="closeModal()">cancel</button>
+
+            </div>
+        </div>
+
+
+    </content>
+</div>

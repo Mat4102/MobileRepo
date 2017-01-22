@@ -1,0 +1,59 @@
+    <view left-buttons="leftButtons" right-buttons="rightButtons" hide-back-button="true" title="'Home'">
+        <content has-header="true">
+            <div class="row row-top" type="bar-assertive">
+                <div class="col col-33" ng-controller="MenuCtrl">
+
+                    <ul class="list" >
+                        <li class="item item-icon-left assertive" ng-repeat="item in list">
+                            <i class={{item.icon}}></i>
+                            <a  ng-click="openLeft(item.link)" >{{item.text}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col col-67" ng-controller="ServiceCliente">
+                            <!--  <a class="button button-clear button-assertive"  ng-click="openModal()">Add Customer </a> -->
+                    <!--  <a class="button button-clear button-assertive"  ng-href="#/customerSearch">get Customer</a>
+                     <!-- <div ng-bind-html="deliberatelyTrustDangerousSnippet()"></div>-->
+                            <div class="list list-inset">
+
+
+                                <ng-include src="template"></ng-include>
+
+                                <script type="text/ng-template" id="page1">
+                                    Insert Customer Code Or Name: <input ng-model="code" ng-keyup="GETCustomer(code)"/>
+                                    <div class="list" ng-repeat="cust in (filteredCust = (customers | filter: code))">
+
+                                        <a class="item item-icon-left assertive"  ng-click="getCustmer(cust.id)">
+                                            <i class="icon ion-android-contact"></i>
+                                            <h2>Code : {{cust.id}}</h2>
+                                            <p>first Name : {{cust.value[1]}}</p>
+                                        </a>
+                                    </div>                                </script>
+
+                                <script type="text/ng-template" id="page2">
+                                    <ul class="list">
+                                        <li class="item">
+                                            <span class="input-label"> Code : {{customer.id}}</span>
+                                        </li>
+                                        <li class="item">
+                                            <span class="input-label">First Name : {{customer.description1}}</span>
+                                        </li>
+                                        <li class="item">
+                                            <span class="input-label">Last Name: {{customer.description2}}</span>
+                                        </li>
+                                        <li class="item">
+                                            <span class="input-label">Address : {{customer.destination.address}}</span>
+                                        </li>
+                                    </ul>
+                                    <a  ng-click="goto()" class="button button-outline icon-left ion-compose button-assertive">search</a>
+
+                                </script>
+                                </div>
+
+
+                    </div>
+
+                </div>
+
+        </content>
+    </view>

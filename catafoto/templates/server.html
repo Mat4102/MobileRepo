@@ -1,0 +1,46 @@
+<view left-buttons="leftButtons" right-buttons="rightButtons" hide-back-button="true" title="'Server'">
+    <content  has-header="true" >
+        <div class="row row-top" type="bar-assertive">
+            <div class="col col-33" ng-controller="MenuCtrl">
+
+                <ul class="list" >
+                    <li class="item item-icon-left assertive"  ng-repeat="item in list">
+                        <i class={{item.icon}}></i>
+                        <a  ng-click="openLeft(item.link)" >{{item.text}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col col-67" ng-controller="ConfigServer">
+        <form name="myForm" novalidate>
+            <label class="item item-input">
+                <span class="input-label">Server</span>
+                <input type="text" name="adress" ng-model="server" required>
+            </label>
+        <span style="color: red;"class="error" ng-show="myForm.adress.$error.required">
+                Adress Required!</span>
+            <label class="item item-input">
+                <span class="input-label">PORT Number</span>
+                <input type="number" name="port" ng-model="port" required>
+            </label>
+             <span style="color: red;"class="error" ng-show="myForm.port.$error.required">
+                Port Required!</span>
+            <label class="item item-input">
+                <span class="input-label">Login</span>
+                <input type="text" name=="log" ng-model="login" required>
+            </label>
+        <span style="color: red;"class="error" ng-show="myForm.log.$error.required">
+                Login Required!</span>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" name="password" ng-model="pwd" required>
+            </label>
+             <span style="color: red;"class="error" ng-show="myForm.password.$error.required">
+                Password Required!</span>
+        </form>
+                <button ng-disabled="!myForm.$valid" ng-click="PutServer(myForm)" class="button button-assertive button-block">Save</button>
+                <a class= "button button-assertive button-block"ng-href="#/main" >Cancel</a>
+</div>
+            </div>
+    </content>
+
+</view>

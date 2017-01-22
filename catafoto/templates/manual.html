@@ -1,0 +1,51 @@
+<view left-buttons="leftButtons" right-buttons="rightButtons" hide-back-button="true" title="'Manual Order'">
+    <content has-header="true" >
+        <div class="row row-top" type="bar-assertive">
+            <div class="col col-33" ng-controller="MenuCtrl">
+
+                <ul class="list" >
+                    <li class="item item-icon-left assertive"  ng-repeat="item in list">
+                        <i class={{item.icon}}></i>
+                        <a  ng-click="openLeft(item.link)" >{{item.text}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col col-67">
+<form name="form" >
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">Code Article</span>
+        <input type="text" name="name" ng-model="name" required />
+    </label>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">date creation</span>
+        <input type="date" name="name" ng-model="name" required />
+    </label>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">fournisseur</span>
+        <input type="text" name="name" ng-model="name" required />
+    </label>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">famille</span>
+        <input type="text" name="name" ng-model="name" required />
+    </label>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">Secteur</span>
+        <input type="text" name="name" ng-model="name" required />
+    </label>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">linea</span>
+        <input type="text" name="name" ng-
+               model="name" required />
+    </label>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">Quantité</span>
+        <input type="text" name="name" ng-model="qt" required/>
+    </label>
+    <a ng-href="#/pet" class="button button-assertive button-block">submit</a>
+
+</form>
+                </div>
+            </div>
+ </content>
+
+</view>
